@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <input type="text" id="cityinput" placeholder="enter city">
+    <button onclick="getWeather()">Get Weather</button>
+    <p id="result"></p>
+
+    <script>
+        async function getWeather() {
+            const city = document.getElementById('cityinput').value;
+            const result = document.getElementById('result');
+
+            try {
+                const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}`;
+                const geoResponse = await fetch(geoUrl);
+                const geoData = await geoResponse.json();
+
+                if (!geoData.results || geoData.results.length === 0) {
+                    result.textContent = 'City not found!';
+                    return;
+                }
+
+                const { latitude, longitude } = geoData.results[0];
+                const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&timezone=auto`;
+                const weatherResponse = await fetch(weatherUrl);
+                const weatherData = await weatherResponse.json();
+
+                const temp = weatherData.current.temperature_2m;
+                result.innerHTML = `Current temperature in ${city}: ${temp}°C`;  
+            } catch (error) {
+                result.textContent = 'Error fetching weather!';
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
