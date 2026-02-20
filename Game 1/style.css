@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.score {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0 20px;
+    border-radius: 10px;
+    color: #ff5722;
+}
+
+.controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    content: '';
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><ellipse cx="50" cy="80" rx="40" ry="15" fill="%236d4c41"/></svg>');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.mole {
+    background: #8d6e63;
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    bottom: -100%;
+    left: 20%;
+    border-radius: 50% 50% 0 0;
+    transition: bottom 0.1s;
+    z-index: 1;
+}
+
+.mole::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+    box-shadow: 25px 0 black;
+}
+
+.mole::after {
+    content: '';
+    width: 8px;
+    height: 5px;
+    background: pink;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.hole.up .mole {
+    bottom: 0;
+}
