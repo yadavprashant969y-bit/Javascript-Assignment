@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorkNest – Find Your Perfect Remote Job Globally</title>
+  <meta name="description" content="WorkNest is a remote job aggregator helping professionals find verified remote positions worldwide. Browse by category, salary, and timezone." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======== Header ======== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">W</div>
+        Work<span>Nest</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="details.html">Job Details</a>
+        <a href="resume.html">Resume Boost</a>
+        <a href="contact.html">Contact</a>
+        <a href="jobs.html\77" class="btn btn-primary nav-cta">Explore Jobs</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ======== Hero Section ======== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          2,500+ Remote Jobs Available Now
+        </div>
+        <h1>Find Your Dream <span class="gradient-text">Remote Job</span> Anywhere in the World</h1>
+        <p>WorkNest aggregates verified remote job postings from top companies worldwide. Filter by category, salary range, and timezone compatibility to find your perfect match.</p>
+        <div class="hero-actions">
+          <a href="jobs.html" class="btn btn-primary">🔍 Browse All Jobs</a>
+          <a href="resume.html" class="btn btn-secondary">🚀 Boost Your Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <h3>2,500+</h3>
+            <p>Remote Jobs</p>
+          </div>
+          <div class="hero-stat">
+            <h3>850+</h3>
+            <p>Companies</p>
+          </div>
+          <div class="hero-stat">
+            <h3>45+</h3>
+            <p>Countries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Featured Companies ======== -->
+  <section class="section" id="companies">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Companies</h2>
+      <p class="section-subtitle reveal">Trusted by the world's leading remote-first organizations</p>
+      <div class="companies-grid reveal">
+        <article class="company-card">
+          <div class="company-icon" style="background: linear-gradient(135deg, #6C63FF, #4F46E5); color: #fff;">G</div>
+          <div>
+            <h4>GitLab</h4>
+            <p>120+ open positions</p>
+          </div>
+        </article>
+        <article class="company-card">
+          <div class="company-icon" style="background: linear-gradient(135deg, #00D9A6, #00B88C); color: #fff;">S</div>
+          <div>
+            <h4>Shopify</h4>
+            <p>85+ open positions</p>
+          </div>
+        </article>
+        <article class="company-card">
+          <div class="company-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706); color: #fff;">Z</div>
+          <div>
+            <h4>Zapier</h4>
+            <p>60+ open positions</p>
+          </div>
+        </article>
+        <article class="company-card">
+          <div class="company-icon" style="background: linear-gradient(135deg, #F472B6, #EC4899); color: #fff;">A</div>
+          <div>
+            <h4>Automattic</h4>
+            <p>95+ open positions</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Top Remote Jobs ======== -->
+  <section class="section" id="top-jobs" style="background: var(--clr-bg-alt);">
+    <div class="container">
+      <h2 class="section-title reveal">Top Remote Jobs</h2>
+      <p class="section-subtitle reveal">Hand-picked opportunities updated daily</p>
+
+      <div class="jobs-grid reveal" id="homeJobsGrid">
+        <!-- Job Card 1 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #6C63FF, #4F46E5); color:#fff;">G</div>
+              <div class="comp-info">
+                <h4>GitLab</h4>
+                <p>San Francisco, USA</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">Senior Frontend Engineer</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-fulltime">Full-Time</span>
+            <span class="badge badge-timezone">🕐 UTC-5 to UTC+2</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Worldwide</span>
+            <span>🕐 Posted 2 days ago</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$120K – $160K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+
+        <!-- Job Card 2 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #00D9A6, #00B88C); color:#fff;">S</div>
+              <div class="comp-info">
+                <h4>Shopify</h4>
+                <p>Ottawa, Canada</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">Product Designer</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-fulltime">Full-Time</span>
+            <span class="badge badge-timezone">🕐 UTC-5 to UTC+1</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 North America</span>
+            <span>🕐 Posted 1 day ago</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$95K – $130K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+
+        <!-- Job Card 3 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #F59E0B, #D97706); color:#fff;">Z</div>
+              <div class="comp-info">
+                <h4>Zapier</h4>
+                <p>Fully Remote</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">Data Analyst</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-parttime">Part-Time</span>
+            <span class="badge badge-timezone">🕐 Any Timezone</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Worldwide</span>
+            <span>🕐 Posted 3 days ago</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$70K – $95K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+
+        <!-- Job Card 4 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #F472B6, #EC4899); color:#fff;">A</div>
+              <div class="comp-info">
+                <h4>Automattic</h4>
+                <p>Distributed</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">DevOps Engineer</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-contract">Contract</span>
+            <span class="badge badge-timezone">🕐 UTC+0 to UTC+5</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Europe / Asia</span>
+            <span>🕐 Posted today</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$85K – $120K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+
+        <!-- Job Card 5 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED); color:#fff;">T</div>
+              <div class="comp-info">
+                <h4>Toptal</h4>
+                <p>Fully Remote</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">Full Stack Developer</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-fulltime">Full-Time</span>
+            <span class="badge badge-timezone">🕐 UTC-8 to UTC+3</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Worldwide</span>
+            <span>🕐 Posted 5 days ago</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$110K – $150K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+
+        <!-- Job Card 6 -->
+        <article class="job-card">
+          <div class="job-card-header">
+            <div class="job-card-company">
+              <div class="company-logo" style="background: linear-gradient(135deg, #14B8A6, #0D9488); color:#fff;">B</div>
+              <div class="comp-info">
+                <h4>Buffer</h4>
+                <p>Fully Remote</p>
+              </div>
+            </div>
+            <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+          </div>
+          <h3><a href="details.html">Marketing Manager</a></h3>
+          <div class="job-tags">
+            <span class="badge badge-remote">🌐 Remote</span>
+            <span class="badge badge-fulltime">Full-Time</span>
+            <span class="badge badge-timezone">🕐 UTC-6 to UTC+1</span>
+          </div>
+          <div class="job-meta">
+            <span>📍 Americas / Europe</span>
+            <span>🕐 Posted 4 days ago</span>
+          </div>
+          <div class="job-card-footer">
+            <span class="salary">$80K – $105K</span>
+            <a href="details.html" class="btn btn-primary apply-btn">View Details</a>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+        <a href="jobs.html" class="btn btn-secondary">View All Remote Jobs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CTA Section ======== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to Work Remotely?</h2>
+        <p>Join thousands of professionals who found their dream remote job through WorkNest.</p>
+        <div class="cta-actions">
+          <a href="jobs.html" class="btn btn-primary">🔍 Search Jobs</a>
+          <a href="resume.html" class="btn btn-accent">🚀 Boost Your Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">W</div>
+            Work<span>Nest</span>
+          </a>
+          <p>Your gateway to verified remote job opportunities across the globe. Work from anywhere, grow everywhere.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="jobs.html">Browse Jobs</a>
+          <a href="resume.html">Resume Boost</a>
+          <a href="details.html">Job Details</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <a href="jobs.html">Engineering</a>
+          <a href="jobs.html">Design</a>
+          <a href="jobs.html">Marketing</a>
+          <a href="jobs.html">Data Science</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Salary Guide</a>
+          <a href="#">Remote Tips</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WorkNest. All rights reserved.</p>
+        <p>Built with ❤️ for remote workers</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

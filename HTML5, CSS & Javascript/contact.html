@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – WorkNest Support & Inquiries</title>
+    <meta name="description"
+        content="Get in touch with WorkNest. Send us your inquiries, suggestions, or feedback. We're here to help you find your perfect remote job." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ======== Header ======== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">W</div>
+                Work<span>Nest</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="details.html">Job Details</a>
+                <a href="resume.html">Resume Boost</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="jobs.html" class="btn btn-primary nav-cta">Explore Jobs</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ======== Page Hero ======== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get in <span class="gradient-text">Touch</span></h1>
+            <p>Have a question or feedback? We'd love to hear from you. Reach out and our team will respond within 24
+                hours.</p>
+        </div>
+    </section>
+
+    <!-- ======== Contact Content ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Left – Info & Social -->
+                <div>
+                    <div class="contact-info-cards reveal">
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>support@worknest.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Office</h4>
+                                <p>123 Innovation Drive, San Francisco, CA 94102</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon – Fri, 9:00 AM – 6:00 PM (PST)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="reveal">
+                        <h3 style="font-weight: 700; margin-bottom: 1rem;">Follow Us</h3>
+                        <div class="socials">
+                            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                            <a href="#" class="social-link" aria-label="GitHub">⌨</a>
+                            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Teaser -->
+                    <div class="boost-card reveal" style="margin-top: 2rem;">
+                        <h3>❓ Frequently Asked Questions</h3>
+                        <div class="tips-list" style="margin-top: 1rem;">
+                            <div class="tip-item">
+                                <div class="tip-icon">🤔</div>
+                                <div>
+                                    <h4>Is WorkNest free to use?</h4>
+                                    <p>Yes! Browsing and applying to jobs is completely free. Premium features like
+                                        Resume Boost have a one-time fee.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🌐</div>
+                                <div>
+                                    <h4>Are all jobs verified remote?</h4>
+                                    <p>We verify every listing to ensure the remote status is accurate. Look for the
+                                        green "Remote" badge tag.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">⏱</div>
+                                <div>
+                                    <h4>How quickly will I hear back?</h4>
+                                    <p>Response times vary by employer, but our team responds to support inquiries
+                                        within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right – Contact Form -->
+                <div class="contact-form-card reveal">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" placeholder="Full name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" placeholder="your@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message *</label>
+                            <textarea id="contactMessage" placeholder="Tell us how we can help you..." rows="6"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">📨 Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CTA ======== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Start Your Remote Career Today</h2>
+                <p>Join thousands of professionals who found their dream remote job through WorkNest.</p>
+                <div class="cta-actions">
+                    <a href="jobs.html" class="btn btn-primary">🔍 Browse All Jobs</a>
+                    <a href="resume.html" class="btn btn-accent">🚀 Boost Your Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="logo-icon">W</div>
+                        Work<span>Nest</span>
+                    </a>
+                    <p>Your gateway to verified remote job opportunities across the globe. Work from anywhere, grow
+                        everywhere.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="jobs.html">Browse Jobs</a>
+                    <a href="resume.html">Resume Boost</a>
+                    <a href="details.html">Job Details</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <a href="jobs.html">Engineering</a>
+                    <a href="jobs.html">Design</a>
+                    <a href="jobs.html">Marketing</a>
+                    <a href="jobs.html">Data Science</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Salary Guide</a>
+                    <a href="#">Remote Tips</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorkNest. All rights reserved.</p>
+                <p>Built with ❤️ for remote workers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span class="toast-msg" id="toastMsg">Message sent successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

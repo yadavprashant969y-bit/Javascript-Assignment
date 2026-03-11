@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Jobs – WorkNest | Browse & Filter Global Opportunities</title>
+    <meta name="description"
+        content="Browse verified remote jobs filtered by category, salary range, and timezone compatibility. Find your perfect remote opportunity on WorkNest." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ======== Header ======== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">W</div>
+                Work<span>Nest</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="jobs.html" class="active">Jobs</a>
+                <a href="details.html">Job Details</a>
+                <a href="resume.html">Resume Boost</a>
+                <a href="contact.html">Contact</a>
+                <a href="jobs.html" class="btn btn-primary nav-cta">Explore Jobs</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ======== Page Hero ======== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Remote <span class="gradient-text">Job Board</span></h1>
+            <p>Discover and filter through thousands of verified remote positions worldwide.</p>
+        </div>
+    </section>
+
+    <!-- ======== Filters ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="filters-section reveal" id="filtersSection">
+                <div class="filters-grid">
+                    <!-- Category -->
+                    <div class="filter-group">
+                        <label for="filterCategory">Job Category</label>
+                        <select id="filterCategory">
+                            <option value="">All Categories</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="design">Design</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="data">Data Science</option>
+                            <option value="devops">DevOps</option>
+                            <option value="management">Management</option>
+                        </select>
+                    </div>
+
+                    <!-- Timezone -->
+                    <div class="filter-group">
+                        <label for="filterTimezone">Timezone</label>
+                        <select id="filterTimezone">
+                            <option value="">All Timezones</option>
+                            <option value="americas">Americas (UTC-8 to UTC-3)</option>
+                            <option value="europe">Europe (UTC-1 to UTC+3)</option>
+                            <option value="asia">Asia (UTC+3 to UTC+9)</option>
+                            <option value="any">Any Timezone</option>
+                        </select>
+                    </div>
+
+                    <!-- Min Salary -->
+                    <div class="filter-group">
+                        <label for="filterSalaryMin">Min Salary ($K/year)</label>
+                        <input type="number" id="filterSalaryMin" placeholder="e.g. 50" min="0" max="500" step="5" />
+                    </div>
+
+                    <!-- Max Salary -->
+                    <div class="filter-group">
+                        <label for="filterSalaryMax">Max Salary ($K/year)</label>
+                        <input type="number" id="filterSalaryMax" placeholder="e.g. 200" min="0" max="500" step="5" />
+                    </div>
+
+                    <!-- Work Type - Radio -->
+                    <div class="filter-group">
+                        <label>Work Type</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="workType" value="" checked />
+                                <span class="radio-custom"></span>
+                                All
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="workType" value="remote" />
+                                <span class="radio-custom"></span>
+                                Remote
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="workType" value="hybrid" />
+                                <span class="radio-custom"></span>
+                                Hybrid
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Filter button -->
+                    <div class="filter-group" style="display: flex; align-items: flex-end;">
+                        <button class="btn btn-primary" id="applyFilters" style="width: 100%;">🔍 Apply Filters</button>
+                    </div>
+                </div>
+
+                <!-- Active filters -->
+                <div class="active-filters" id="activeFilters"></div>
+            </div>
+
+            <!-- Results count -->
+            <p class="results-count" id="resultsCount">Showing <strong>12</strong> remote jobs</p>
+
+            <!-- ======== Job Feed ======== -->
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Job 1 -->
+                <article class="job-card" data-category="engineering" data-timezone="any" data-salary-min="120"
+                    data-salary-max="160" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #6C63FF, #4F46E5); color:#fff;">G</div>
+                            <div class="comp-info">
+                                <h4>GitLab</h4>
+                                <p>San Francisco, USA</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Senior Frontend Engineer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Any Timezone</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Worldwide</span>
+                        <span>🕐 Posted 2 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$120K – $160K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 2 -->
+                <article class="job-card" data-category="design" data-timezone="americas" data-salary-min="95"
+                    data-salary-max="130" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #00D9A6, #00B88C); color:#fff;">S</div>
+                            <div class="comp-info">
+                                <h4>Shopify</h4>
+                                <p>Ottawa, Canada</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Product Designer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Americas</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 North America</span>
+                        <span>🕐 Posted 1 day ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$95K – $130K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 3 -->
+                <article class="job-card" data-category="data" data-timezone="any" data-salary-min="70"
+                    data-salary-max="95" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #F59E0B, #D97706); color:#fff;">Z</div>
+                            <div class="comp-info">
+                                <h4>Zapier</h4>
+                                <p>Fully Remote</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Data Analyst</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-parttime">Part-Time</span>
+                        <span class="badge badge-timezone">🕐 Any Timezone</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Worldwide</span>
+                        <span>🕐 Posted 3 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$70K – $95K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 4 -->
+                <article class="job-card" data-category="devops" data-timezone="europe" data-salary-min="85"
+                    data-salary-max="120" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #F472B6, #EC4899); color:#fff;">A</div>
+                            <div class="comp-info">
+                                <h4>Automattic</h4>
+                                <p>Distributed</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">DevOps Engineer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-contract">Contract</span>
+                        <span class="badge badge-timezone">🕐 Europe</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Europe / Asia</span>
+                        <span>🕐 Posted today</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$85K – $120K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 5 -->
+                <article class="job-card" data-category="engineering" data-timezone="any" data-salary-min="110"
+                    data-salary-max="150" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #8B5CF6, #7C3AED); color:#fff;">T</div>
+                            <div class="comp-info">
+                                <h4>Toptal</h4>
+                                <p>Fully Remote</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Full Stack Developer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Any Timezone</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Worldwide</span>
+                        <span>🕐 Posted 5 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$110K – $150K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 6 -->
+                <article class="job-card" data-category="marketing" data-timezone="americas" data-salary-min="80"
+                    data-salary-max="105" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #14B8A6, #0D9488); color:#fff;">B</div>
+                            <div class="comp-info">
+                                <h4>Buffer</h4>
+                                <p>Fully Remote</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Marketing Manager</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Americas</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Americas</span>
+                        <span>🕐 Posted 4 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$80K – $105K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 7 -->
+                <article class="job-card" data-category="data" data-timezone="europe" data-salary-min="90"
+                    data-salary-max="125" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #3B82F6, #2563EB); color:#fff;">D</div>
+                            <div class="comp-info">
+                                <h4>DataDog</h4>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Machine Learning Engineer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Europe</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Europe</span>
+                        <span>🕐 Posted 1 day ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$90K – $125K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 8 -->
+                <article class="job-card" data-category="design" data-timezone="any" data-salary-min="75"
+                    data-salary-max="110" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #EF4444, #DC2626); color:#fff;">F</div>
+                            <div class="comp-info">
+                                <h4>Figma</h4>
+                                <p>San Francisco, USA</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">UX Researcher</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Any Timezone</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Worldwide</span>
+                        <span>🕐 Posted 6 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$75K – $110K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 9 -->
+                <article class="job-card" data-category="engineering" data-timezone="asia" data-salary-min="60"
+                    data-salary-max="90" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #A855F7, #9333EA); color:#fff;">R</div>
+                            <div class="comp-info">
+                                <h4>Razorpay</h4>
+                                <p>Bangalore, India</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Backend Developer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Asia</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Asia-Pacific</span>
+                        <span>🕐 Posted 2 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$60K – $90K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 10 -->
+                <article class="job-card" data-category="management" data-timezone="americas" data-salary-min="130"
+                    data-salary-max="180" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #F97316, #EA580C); color:#fff;">H</div>
+                            <div class="comp-info">
+                                <h4>HubSpot</h4>
+                                <p>Boston, USA</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Engineering Manager</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Americas</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 North America</span>
+                        <span>🕐 Posted 3 days ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$130K – $180K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 11 -->
+                <article class="job-card" data-category="marketing" data-timezone="europe" data-salary-min="55"
+                    data-salary-max="80" data-type="hybrid">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #06B6D4, #0891B2); color:#fff;">N</div>
+                            <div class="comp-info">
+                                <h4>Notion</h4>
+                                <p>London, UK</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Content Strategist</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-timezone"
+                            style="background: rgba(245,158,11,.12); color: var(--clr-parttime); border-color: rgba(245,158,11,.25);">🏢
+                            Hybrid</span>
+                        <span class="badge badge-fulltime">Full-Time</span>
+                        <span class="badge badge-timezone">🕐 Europe</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Europe</span>
+                        <span>🕐 Posted 1 day ago</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$55K – $80K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+
+                <!-- Job 12 -->
+                <article class="job-card" data-category="devops" data-timezone="any" data-salary-min="100"
+                    data-salary-max="140" data-type="remote">
+                    <div class="job-card-header">
+                        <div class="job-card-company">
+                            <div class="company-logo"
+                                style="background: linear-gradient(135deg, #84CC16, #65A30D); color:#fff;">C</div>
+                            <div class="comp-info">
+                                <h4>CloudFlare</h4>
+                                <p>San Francisco, USA</p>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn" aria-label="Bookmark job">☆</button>
+                    </div>
+                    <h3><a href="details.html">Site Reliability Engineer</a></h3>
+                    <div class="job-tags">
+                        <span class="badge badge-remote">🌐 Remote</span>
+                        <span class="badge badge-contract">Contract</span>
+                        <span class="badge badge-timezone">🕐 Any Timezone</span>
+                    </div>
+                    <div class="job-meta">
+                        <span>📍 Worldwide</span>
+                        <span>🕐 Posted today</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="salary">$100K – $140K</span>
+                        <a href="details.html" class="btn btn-primary apply-btn">Apply Now</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="logo-icon">W</div>
+                        Work<span>Nest</span>
+                    </a>
+                    <p>Your gateway to verified remote job opportunities across the globe. Work from anywhere, grow
+                        everywhere.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="jobs.html">Browse Jobs</a>
+                    <a href="resume.html">Resume Boost</a>
+                    <a href="details.html">Job Details</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <a href="jobs.html">Engineering</a>
+                    <a href="jobs.html">Design</a>
+                    <a href="jobs.html">Marketing</a>
+                    <a href="jobs.html">Data Science</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Salary Guide</a>
+                    <a href="#">Remote Tips</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorkNest. All rights reserved.</p>
+                <p>Built with ❤️ for remote workers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

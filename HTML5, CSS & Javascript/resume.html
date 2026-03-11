@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Boost – WorkNest Premium Feature</title>
+    <meta name="description"
+        content="Boost your resume with WorkNest's premium service. Get expert tips, upload your resume, and track your boost status to stand out from the crowd." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ======== Header ======== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon">W</div>
+                Work<span>Nest</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="details.html">Job Details</a>
+                <a href="resume.html" class="active">Resume Boost</a>
+                <a href="contact.html">Contact</a>
+                <a href="jobs.html" class="btn btn-primary nav-cta">Explore Jobs</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ======== Page Hero ======== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>🚀 <span class="gradient-text">Resume Boost</span></h1>
+            <p>Stand out from the competition with our premium resume enhancement service. Get noticed by top employers.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======== Boost Content ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="boost-grid">
+
+                <!-- Left Column – Upload & Tips -->
+                <div>
+                    <!-- Upload Form -->
+                    <div class="boost-card reveal">
+                        <h3>📄 Upload Your Resume</h3>
+                        <p>Upload your resume and our AI-powered system will analyze and enhance it for maximum impact.
+                        </p>
+                        <form id="resumeUploadForm">
+                            <div class="form-group">
+                                <label for="resumeName">Full Name *</label>
+                                <input type="text" id="resumeName" placeholder="Your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="resumeEmail">Email Address *</label>
+                                <input type="email" id="resumeEmail" placeholder="your@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="resumeCategory">Target Job Category</label>
+                                <select id="resumeCategory">
+                                    <option value="engineering">Engineering</option>
+                                    <option value="design">Design</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="data">Data Science</option>
+                                    <option value="devops">DevOps</option>
+                                    <option value="management">Management</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="resumeFile">Upload Resume (PDF, DOC) *</label>
+                                <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="resumeNotes">Special Instructions</label>
+                                <textarea id="resumeNotes" placeholder="Any specific areas you'd like us to focus on..."
+                                    rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent" style="width: 100%;">🚀 Boost My
+                                Resume</button>
+                        </form>
+                    </div>
+
+                    <!-- Guidance Tips -->
+                    <div class="boost-card reveal" style="margin-top: 2rem;">
+                        <h3>💡 Resume Enhancement Tips</h3>
+                        <p>Follow these expert tips to maximize your remote job applications.</p>
+                        <div class="tips-list">
+                            <div class="tip-item">
+                                <div class="tip-icon">🎯</div>
+                                <div>
+                                    <h4>Tailor Your Summary</h4>
+                                    <p>Customize your professional summary for each remote role. Highlight
+                                        remote-specific skills like self-management and async communication.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">📊</div>
+                                <div>
+                                    <h4>Quantify Achievements</h4>
+                                    <p>Use numbers and metrics to showcase impact. "Increased conversion by 35%" is
+                                        stronger than "improved conversions."</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🔑</div>
+                                <div>
+                                    <h4>Use Keywords Wisely</h4>
+                                    <p>Include relevant industry keywords from the job description. Many companies use
+                                        ATS systems that scan for specific terms.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🌐</div>
+                                <div>
+                                    <h4>Highlight Remote Experience</h4>
+                                    <p>Emphasize your experience with remote tools (Slack, Zoom, Jira) and mention
+                                        timezone flexibility and async work habits.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">🎨</div>
+                                <div>
+                                    <h4>Clean & Modern Design</h4>
+                                    <p>Use a clean, scannable layout with consistent formatting. Avoid excessive colors
+                                        or graphics that may not parse well in ATS.</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <div class="tip-icon">✅</div>
+                                <div>
+                                    <h4>Proofread Thoroughly</h4>
+                                    <p>Spelling and grammar errors can disqualify you instantly. Use tools like
+                                        Grammarly and have a peer review your resume.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column – Status & Pricing -->
+                <div>
+                    <!-- Status Tracking -->
+                    <div class="boost-card reveal">
+                        <h3>📋 Boost Status Tracker</h3>
+                        <p>Track the progress of your resume enhancement in real-time.</p>
+                        <div class="status-tracker" id="statusTracker">
+                            <div class="status-steps">
+                                <div class="status-step completed" id="step1">
+                                    <div class="step-circle">✓</div>
+                                    <div class="step-content">
+                                        <h4>Resume Uploaded</h4>
+                                        <p>Your resume has been received and queued for review.</p>
+                                    </div>
+                                </div>
+                                <div class="status-step completed" id="step2">
+                                    <div class="step-circle">✓</div>
+                                    <div class="step-content">
+                                        <h4>AI Analysis</h4>
+                                        <p>Our AI is scanning your resume for optimization opportunities.</p>
+                                    </div>
+                                </div>
+                                <div class="status-step active" id="step3">
+                                    <div class="step-circle">3</div>
+                                    <div class="step-content">
+                                        <h4>Expert Review</h4>
+                                        <p>A career expert is reviewing and enhancing your resume.</p>
+                                    </div>
+                                </div>
+                                <div class="status-step" id="step4">
+                                    <div class="step-circle">4</div>
+                                    <div class="step-content">
+                                        <h4>Final Polish</h4>
+                                        <p>Final formatting, keyword optimization, and quality check.</p>
+                                    </div>
+                                </div>
+                                <div class="status-step" id="step5">
+                                    <div class="step-circle">5</div>
+                                    <div class="step-content">
+                                        <h4>Delivered</h4>
+                                        <p>Your boosted resume is ready for download.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="boost-card reveal" style="margin-top: 2rem;">
+                        <div class="pricing-card">
+                            <h3 style="margin-bottom: .5rem;">Premium Resume Boost</h3>
+                            <div class="price">$49</div>
+                            <div class="price-period">one-time payment</div>
+                            <ul class="pricing-features">
+                                <li><span class="check">✓</span> AI-Powered Resume Analysis</li>
+                                <li><span class="check">✓</span> Expert Career Coach Review</li>
+                                <li><span class="check">✓</span> ATS Optimization & Keywords</li>
+                                <li><span class="check">✓</span> Modern Template Redesign</li>
+                                <li><span class="check">✓</span> 48-Hour Delivery Guarantee</li>
+                                <li><span class="check">✓</span> 2 Rounds of Revisions</li>
+                                <li><span class="check">✓</span> Priority Job Badge Tag</li>
+                            </ul>
+                            <button class="btn btn-accent" style="width: 100%;" id="getPremiumBtn">Get Premium
+                                Boost</button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stat Cards -->
+                    <div class="boost-card reveal" style="margin-top: 2rem;">
+                        <h3>📈 Boost Results</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                            <div
+                                style="text-align: center; padding: 1.25rem; background: var(--clr-bg); border-radius: var(--radius-md); border: 1px solid var(--clr-surface-border);">
+                                <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-accent);">3x</div>
+                                <div style="font-size: .8rem; color: var(--clr-text-dim);">More Interviews</div>
+                            </div>
+                            <div
+                                style="text-align: center; padding: 1.25rem; background: var(--clr-bg); border-radius: var(--radius-md); border: 1px solid var(--clr-surface-border);">
+                                <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-primary-light);">89%
+                                </div>
+                                <div style="font-size: .8rem; color: var(--clr-text-dim);">ATS Pass Rate</div>
+                            </div>
+                            <div
+                                style="text-align: center; padding: 1.25rem; background: var(--clr-bg); border-radius: var(--radius-md); border: 1px solid var(--clr-surface-border);">
+                                <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-accent);">48h</div>
+                                <div style="font-size: .8rem; color: var(--clr-text-dim);">Avg Delivery</div>
+                            </div>
+                            <div
+                                style="text-align: center; padding: 1.25rem; background: var(--clr-bg); border-radius: var(--radius-md); border: 1px solid var(--clr-surface-border);">
+                                <div style="font-size: 1.8rem; font-weight: 900; color: var(--clr-primary-light);">2.5K+
+                                </div>
+                                <div style="font-size: .8rem; color: var(--clr-text-dim);">Happy Users</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== Footer ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="logo-icon">W</div>
+                        Work<span>Nest</span>
+                    </a>
+                    <p>Your gateway to verified remote job opportunities across the globe. Work from anywhere, grow
+                        everywhere.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="jobs.html">Browse Jobs</a>
+                    <a href="resume.html">Resume Boost</a>
+                    <a href="details.html">Job Details</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <a href="jobs.html">Engineering</a>
+                    <a href="jobs.html">Design</a>
+                    <a href="jobs.html">Marketing</a>
+                    <a href="jobs.html">Data Science</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Salary Guide</a>
+                    <a href="#">Remote Tips</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorkNest. All rights reserved.</p>
+                <p>Built with ❤️ for remote workers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span class="toast-msg" id="toastMsg">Resume submitted for boost!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
